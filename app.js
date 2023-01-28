@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 mongoose.set('strictQuery', false);
-mongoose.connect("mongodb://localhost:27017/helloDB");
+mongoose.connect("mongodb+srv://ashu24998:<password>@cluster0.xgfoy2i.mongodb.net/blogDB");
 
 const conSchema = new mongoose.Schema({
 	title: String,
@@ -100,6 +100,6 @@ app.post("/compose", function(req, res) {
 	res.redirect("/");
 })
 
-app.listen(3000, function() {
+app.listen(process.env.PORT || 3000, function() {
   console.log("Server started on port 3000");
 });
