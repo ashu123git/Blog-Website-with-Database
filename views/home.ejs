@@ -1,0 +1,8 @@
+<%- include('partials/header'); -%>
+
+<% homeData.forEach(function(datas) { %>
+    <h1><%= datas.title %></h1>
+    <p><%= datas.titleContent.substring(0, 100)+"....." %> <a href="/posts/<%=datas.title%>">Read More</a> </p>
+<% }) %>
+
+<%- include('partials/footer'); -%>
