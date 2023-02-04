@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 mongoose.set('strictQuery', false);
-mongoose.connect("mongodb+srv://ashu24998:fhuM2wj5QBFq5A6w@cluster0.xgfoy2i.mongodb.net/blogDB");
+mongoose.connect("mongodb+srv://ashu24998:<myPassword>@cluster0.xgfoy2i.mongodb.net/blogDB");
 
 const conSchema = new mongoose.Schema({
 	title: String,
